@@ -24,8 +24,8 @@ export async function storeNewBook(book) {
     return new_book;
 }
 
-export async function updateBook(book) {
+export async function updateBook(id, book) {
   const update_book = await sql `
-  update books set ${sql(book, 'book_name')} where id_book = ${ book.id_book };`;
+  update books set ${sql(book, 'book_name')} where id_book = ${ id };`;
   return update_book;
 }

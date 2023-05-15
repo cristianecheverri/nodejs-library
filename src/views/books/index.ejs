@@ -131,6 +131,9 @@
                     title="Buscar libro">
                     <i class="zmdi zmdi-search"></i>
                 </li>
+                <li class="tooltips-general btn-help" data-placement="bottom" title="Registrarse">
+                    <i class="zmdi zmdi-account-add"><a href="/auth/signUp">Registrarse</a></i>
+                </li>
                 <li class="tooltips-general btn-help" data-placement="bottom" title="Ayuda">
                     <i class="zmdi zmdi-help-outline zmdi-hc-fw"></i>
                 </li>
@@ -185,12 +188,17 @@
                                     &nbsp;&nbsp; Más
                                     información</a>
                             </p>
+                            <p class="text-center pull-right">
+                                <a href="/books/edit/<%= book.id_book %>" class="btn btn-info btn-xs"
+                                    style="margin-right: 10px;"><i class="zmdi zmdi-info-outline"></i>
+                                    &nbsp;&nbsp; Editar</a>
+                            </p>
                         </div>
                     </div>
                     <% })%>
-            <% } else { %>
-                No hay libros
-            <% } %>
+                        <% } else { %>
+                            No hay libros
+                            <% } %>
         </div>
         <div class="modal fade" tabindex="-1" role="dialog" id="ModalHelp">
             <div class="modal-dialog modal-lg">
